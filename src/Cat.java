@@ -27,21 +27,21 @@ public class Cat {
 		int x=cat1;
 		int y=cat2;
 		// Draw the head
-		g2.setColor(Color.black);
+		g2.setColor(Color.red);
 		g2.fillOval(x, y, HEAD_DIMENSION, HEAD_DIMENSION);
 		// Draw the eyes
-		g2.setColor(Color.green);
+		g2.setColor(Color.blue);
 		x = cat1 + EYE_X; 
 		y = cat2 + EYE_Y;
 		g2.fillOval(x, y, EYE_WIDTH, EYE_HEIGHT);
 		x += EYE_SEPARATION;
 		g2.fillOval(x, y, EYE_WIDTH, EYE_HEIGHT);
 		// Draw the mouth
-		g2.setColor(Color.pink);
+		g2.setColor(Color.yellow);
 		x = cat1 + MOUTH_X;
 		y = cat2 + MOUTH_Y;
 		g2.fillOval(x, y, MOUTH_WIDTH, MOUTH_HEIGHT);
-		g2.setColor(Color.black);
+		g2.setColor(Color.red);
 		// Meow text appears below cat head, +10 places below 
 		// so it doesn't overlap the drawing
 		g2.drawString("Meow", cat1, cat2+HEAD_DIMENSION+10);	
