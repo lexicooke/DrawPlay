@@ -21,29 +21,29 @@ public class Cat {
 	private static final int MOUTH_Y = HEAD_DIMENSION/5 * 3;
 	
 	// draw will render the Cat on the Graphics object
-	public void draw(Graphics g, int catX, int catY)
+	public void draw(Graphics g, int cat1, int cat2)
 	{
 		Graphics2D g2 = (Graphics2D) g;
-		int x=catX;
-		int y=catY;
+		int x=cat1;
+		int y=cat2;
 		// Draw the head
 		g2.setColor(Color.black);
 		g2.fillOval(x, y, HEAD_DIMENSION, HEAD_DIMENSION);
 		// Draw the eyes
 		g2.setColor(Color.green);
-		x = catX + EYE_X; 
-		y = catY + EYE_Y;
+		x = cat1 + EYE_X; 
+		y = cat2 + EYE_Y;
 		g2.fillOval(x, y, EYE_WIDTH, EYE_HEIGHT);
 		x += EYE_SEPARATION;
 		g2.fillOval(x, y, EYE_WIDTH, EYE_HEIGHT);
 		// Draw the mouth
 		g2.setColor(Color.pink);
-		x = catX + MOUTH_X;
-		y = catY + MOUTH_Y;
+		x = cat1 + MOUTH_X;
+		y = cat2 + MOUTH_Y;
 		g2.fillOval(x, y, MOUTH_WIDTH, MOUTH_HEIGHT);
 		g2.setColor(Color.black);
 		// Meow text appears below cat head, +10 places below 
 		// so it doesn't overlap the drawing
-		g2.drawString("Meow", catX, catY+HEAD_DIMENSION+10);	
+		g2.drawString("Meow", cat1, cat2+HEAD_DIMENSION+10);	
 	}
 }
